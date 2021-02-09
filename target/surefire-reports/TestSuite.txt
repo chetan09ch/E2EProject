@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 29.658 s <<< FAILURE! - in TestSuite
+Academy.ValidateTitle.baseNavigation  Time elapsed: 6.874 s  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<...> but was:<...123>
+	at Academy.ValidateTitle.baseNavigation(ValidateTitle.java:52)
+
+Academy.HomePage.baseNavigation[nonrestricteduser@qw.com, 123456, nonrestricteduser](1)  Time elapsed: 7.623 s  <<< FAILURE!
+org.openqa.selenium.InvalidSelectorException: 
+invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.141)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'XIPL0505', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\CCHOUD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 52ad5f395fb51cc0ca88f96f9b27d503
+*** Element info: {Using=css selector, value=//[href*='password/new']}
+	at Academy.HomePage.baseNavigation(HomePage.java:67)
+
+Academy.HomePage.baseNavigation[restricteduser@qw.com, 123456, restricteduser](2)  Time elapsed: 6.635 s  <<< FAILURE!
+org.openqa.selenium.InvalidSelectorException: 
+invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=87.0.4280.141)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'XIPL0505', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\CCHOUD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 52ad5f395fb51cc0ca88f96f9b27d503
+*** Element info: {Using=css selector, value=//[href*='password/new']}
+	at Academy.HomePage.baseNavigation(HomePage.java:67)
+

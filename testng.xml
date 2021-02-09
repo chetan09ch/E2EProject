@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel ="tests">
+
+<listeners>
+<listener class-name="Academy.Listeners"/>
+</listeners>
+
+  <test name="App Testing">
+	<classes>
+		<class name="Academy.HomePage" />
+	</classes>
+</test>
+
+	<test name="Validating Title of the page">
+	<classes>
+		<class name="Academy.ValidateTitle" />
+	</classes>
+	</test>
+
+	<test name="Validatting navigation bar">
+	<classes>
+		<class name="Academy.ValidateNavigationBar" />
+	</classes>
+	</test> 
+  
+</suite> <!-- Suite -->
