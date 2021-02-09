@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,31 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
+                    <span class="method-stats">4 methods,  2 skipped,  2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Academy.ValidateTitle" hash-for-method="baseNavigation">baseNavigation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Academy.HomePage" hash-for-method="baseNavigation(nonrestricteduser@qw.com, 123456, nonrestricteduser)">baseNavigation(nonrestricteduser@qw.com, 123456, nonrestricteduser)</a> <!-- method navigator-link -->
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Academy.ValidateNavigationBar" hash-for-method="baseNavigation">baseNavigation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Academy.HomePage" hash-for-method="baseNavigation(restricteduser@qw.com, 123456, restricteduser)">baseNavigation(restricteduser@qw.com, 123456, restricteduser)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -126,7 +121,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Academy.ValidateNavigationBar" hash-for-method="baseNavigation">baseNavigation</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Academy.HomePage" hash-for-method="baseNavigation(restricteduser@qw.com, 123456, restricteduser)">baseNavigation(restricteduser@qw.com, 123456, restricteduser)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Academy.HomePage" hash-for-method="baseNavigation(nonrestricteduser@qw.com, 123456, nonrestricteduser)">baseNavigation(nonrestricteduser@qw.com, 123456, nonrestricteduser)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -141,9 +141,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">Academy.ValidateTitle</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -152,101 +152,105 @@
                   <a name="baseNavigation">
                   </a> <!-- baseNavigation -->
                   <span class="method-name">baseNavigation</span>
-                  <div class="stack-trace">junit.framework.ComparisonFailure: expected:&lt;...&gt; but was:&lt;...123&gt;
-	at junit.framework.Assert.assertEquals(Assert.java:81)
-	at junit.framework.Assert.assertEquals(Assert.java:87)
-	at Academy.ValidateTitle.baseNavigation(ValidateTitle.java:52)
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: session not created
+from timeout: Timed out receiving message from renderer: 600.000
+  (Session info: chrome=87.0.4280.141)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;XIPL0505&apos;, ip: &apos;172.27.252.245&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0151C0C3+3326147]
+	Ordinal0 [0x01400851+2164817]
+	Ordinal0 [0x01287298+619160]
+	Ordinal0 [0x0127B17F+569727]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x012838B1+604337]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01281D2C+597292]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127FE62+589410]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127F075+585845]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01276776+550774]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x01279F13+565011]
+	Ordinal0 [0x01279D07+564487]
+	Ordinal0 [0x012882C0+623296]
+	Ordinal0 [0x01226BDD+224221]
+	Ordinal0 [0x01225CAC+220332]
+	Ordinal0 [0x0122189B+202907]
+	Ordinal0 [0x01203DF4+81396]
+	Ordinal0 [0x01204DEE+85486]
+	Ordinal0 [0x01204D79+85369]
+	Ordinal0 [0x014185DC+2262492]
+	GetHandleVerifier [0x016A2874+1487204]
+	GetHandleVerifier [0x016A23CD+1486013]
+	GetHandleVerifier [0x016AA368+1518680]
+	GetHandleVerifier [0x016A2F4E+1488958]
+	Ordinal0 [0x0140ED0D+2223373]
+	Ordinal0 [0x0141A12B+2269483]
+	Ordinal0 [0x0141A26F+2269807]
+	Ordinal0 [0x0142ECB8+2354360]
+	BaseThreadInitThunk [0x77B10419+25]
+	RtlGetAppContainerNamedObjectPath [0x77CD74ED+237]
+	RtlGetAppContainerNamedObjectPath [0x77CD74BD+189]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at resources.BaseClass.initializedriver(BaseClass.java:38)
+	at Academy.ValidateTitle.initialize(ValidateTitle.java:30)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-... Removed 16 stack frames
+... Removed 19 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Academy.HomePage</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="baseNavigation(nonrestricteduser@qw.com, 123456, nonrestricteduser)">
-                  </a> <!-- baseNavigation(nonrestricteduser@qw.com, 123456, nonrestricteduser) -->
-                  <span class="method-name">baseNavigation</span>
-                  <span class="parameters">(nonrestricteduser@qw.com, 123456, nonrestricteduser)</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=87.0.4280.141)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;XIPL0505&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\CCHOUD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 52ad5f395fb51cc0ca88f96f9b27d503
-*** Element info: {Using=css selector, value=//[href*=&apos;password/new&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.LoginPage.forgotPassword(LoginPage.java:28)
-	at Academy.HomePage.baseNavigation(HomePage.java:67)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 20 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="baseNavigation(restricteduser@qw.com, 123456, restricteduser)">
-                  </a> <!-- baseNavigation(restricteduser@qw.com, 123456, restricteduser) -->
-                  <span class="method-name">baseNavigation</span>
-                  <span class="parameters">(restricteduser@qw.com, 123456, restricteduser)</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=87.0.4280.141)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;XIPL0505&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\CCHOUD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 52ad5f395fb51cc0ca88f96f9b27d503
-*** Element info: {Using=css selector, value=//[href*=&apos;password/new&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.LoginPage.forgotPassword(LoginPage.java:28)
-	at Academy.HomePage.baseNavigation(HomePage.java:67)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 20 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">Academy.ValidateNavigationBar</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -255,6 +259,122 @@ Session ID: 52ad5f395fb51cc0ca88f96f9b27d503
                   <a name="baseNavigation">
                   </a> <!-- baseNavigation -->
                   <span class="method-name">baseNavigation</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: session not created
+from timeout: Timed out receiving message from renderer: 600.000
+  (Session info: chrome=87.0.4280.141)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;XIPL0505&apos;, ip: &apos;172.27.252.245&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0151C0C3+3326147]
+	Ordinal0 [0x01400851+2164817]
+	Ordinal0 [0x01287298+619160]
+	Ordinal0 [0x0127B17F+569727]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x012838B1+604337]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01281D2C+597292]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127FE62+589410]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127F075+585845]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01276776+550774]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x01279F13+565011]
+	Ordinal0 [0x01279D07+564487]
+	Ordinal0 [0x012882C0+623296]
+	Ordinal0 [0x01226BDD+224221]
+	Ordinal0 [0x01225CAC+220332]
+	Ordinal0 [0x0122189B+202907]
+	Ordinal0 [0x01203DF4+81396]
+	Ordinal0 [0x01204DEE+85486]
+	Ordinal0 [0x01204D79+85369]
+	Ordinal0 [0x014185DC+2262492]
+	GetHandleVerifier [0x016A2874+1487204]
+	GetHandleVerifier [0x016A23CD+1486013]
+	GetHandleVerifier [0x016AA368+1518680]
+	GetHandleVerifier [0x016A2F4E+1488958]
+	Ordinal0 [0x0140ED0D+2223373]
+	Ordinal0 [0x0141A12B+2269483]
+	Ordinal0 [0x0141A26F+2269807]
+	Ordinal0 [0x0142ECB8+2354360]
+	BaseThreadInitThunk [0x77B10419+25]
+	RtlGetAppContainerNamedObjectPath [0x77CD74ED+237]
+	RtlGetAppContainerNamedObjectPath [0x77CD74BD+189]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at resources.BaseClass.initializedriver(BaseClass.java:38)
+	at Academy.ValidateNavigationBar.initialize(ValidateNavigationBar.java:29)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 19 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Academy.HomePage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="baseNavigation(restricteduser@qw.com, 123456, restricteduser)">
+                  </a> <!-- baseNavigation(restricteduser@qw.com, 123456, restricteduser) -->
+                  <span class="method-name">baseNavigation</span>
+                  <span class="parameters">(restricteduser@qw.com, 123456, restricteduser)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="baseNavigation(nonrestricteduser@qw.com, 123456, nonrestricteduser)">
+                  </a> <!-- baseNavigation(nonrestricteduser@qw.com, 123456, nonrestricteduser) -->
+                  <span class="method-name">baseNavigation</span>
+                  <span class="parameters">(nonrestricteduser@qw.com, 123456, nonrestricteduser)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -334,24 +454,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'baseNavigation')
 data.setCell(0, 2, 'Academy.HomePage')
-data.setCell(0, 3, 15833);
+data.setCell(0, 3, 9078);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'baseNavigation')
-data.setCell(1, 2, 'Academy.ValidateNavigationBar')
-data.setCell(1, 3, 7013);
+data.setCell(1, 2, 'Academy.HomePage')
+data.setCell(1, 3, 6562);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'baseNavigation')
 data.setCell(2, 2, 'Academy.ValidateTitle')
-data.setCell(2, 3, 6856);
+data.setCell(2, 3, 0);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'baseNavigation')
-data.setCell(3, 2, 'Academy.HomePage')
-data.setCell(3, 3, 6633);
+data.setCell(3, 2, 'Academy.ValidateNavigationBar')
+data.setCell(3, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -379,6 +499,8 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Academy.ValidateNavigationBar</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
@@ -386,6 +508,8 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Academy.ValidateTitle</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
@@ -397,54 +521,31 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">baseNavigation(nonrestricteduser@qw.com, 123456, nonrestricteduser)</span>
-                <span class="method-start">4553 ms</span>
+                <span class="method-start">4830 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Academy.ValidateNavigationBar</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">baseNavigation</span>
-                <span class="method-start">12553 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Academy.ValidateTitle</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">baseNavigation</span>
-                <span class="method-start">12766 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Academy.ValidateNavigationBar</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">19570 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Academy.ValidateTitle</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">20547 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Academy.HomePage</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">baseNavigation(restricteduser@qw.com, 123456, restricteduser)</span>
-                <span class="method-start">20885 ms</span>
+                <span class="method-start">13912 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">27989 ms</span>
+                <span class="method-start">20476 ms</span>
               </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Academy.ValidateTitle</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">baseNavigation</span>
+                <span class="method-start">-1612863784467 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Academy.ValidateNavigationBar</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">baseNavigation</span>
+                <span class="method-start">-1612863784467 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

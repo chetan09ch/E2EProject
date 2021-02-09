@@ -9,76 +9,382 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">Validatting navigation bar</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">20,748</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Validating Title of the page</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">21,557</td><td></td><td></td></tr>
-<tr><td><a href="#t2">App Testing</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">28,808</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num attn">3</th><th class="num">71,113</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">App Testing</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">21,198</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Validating Title of the page</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">602,874</td><td></td><td></td></tr>
+<tr><td><a href="#t2">Validatting navigation bar</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">603,924</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">2</th><th class="num attn">2</th><th class="num">0</th><th class="num">1,227,996</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Validatting navigation bar &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Academy.ValidateNavigationBar</td><td><a href="#m0">baseNavigation</a></td><td rowspan="1">1612850753962</td><td rowspan="1">7013</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Validating Title of the page &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Academy.ValidateTitle</td><td><a href="#m1">baseNavigation</a></td><td rowspan="1">1612850754175</td><td rowspan="1">6856</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">App Testing &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">Academy.HomePage</td><td><a href="#m2">baseNavigation</a></td><td rowspan="2">1612850745962</td><td rowspan="2">15833</td></tr><tr class="failedeven"><td><a href="#m3">baseNavigation</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">App Testing &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">Academy.HomePage</td><td><a href="#m0">baseNavigation</a></td><td rowspan="2">1612863798379</td><td rowspan="2">6562</td></tr><tr class="passedeven"><td><a href="#m1">baseNavigation</a></td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Validating Title of the page &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">Academy.ValidateTitle</td><td><a href="#m2">initialize</a></td><td rowspan="1">1612863784467</td><td rowspan="1">602867</td></tr><tr><th colspan="4">Validating Title of the page &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">Academy.ValidateTitle</td><td><a href="#m3">teardown</a></td><td rowspan="1">1612864387341</td><td rowspan="1">0</td></tr><tr><th colspan="4">Validating Title of the page &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">Academy.ValidateTitle</td><td><a href="#m4">baseNavigation</a></td><td rowspan="1">1612864387340</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">Validatting navigation bar &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">Academy.ValidateNavigationBar</td><td><a href="#m5">initialize</a></td><td rowspan="1">1612863784467</td><td rowspan="1">603922</td></tr><tr><th colspan="4">Validatting navigation bar &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">Academy.ValidateNavigationBar</td><td><a href="#m6">teardown</a></td><td rowspan="1">1612864388391</td><td rowspan="1">0</td></tr><tr><th colspan="4">Validatting navigation bar &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">Academy.ValidateNavigationBar</td><td><a href="#m7">baseNavigation</a></td><td rowspan="1">1612864388391</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Validatting navigation bar</h2><h3 id="m0">Academy.ValidateNavigationBar#baseNavigation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Validating Title of the page</h2><h3 id="m1">Academy.ValidateTitle#baseNavigation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">junit.framework.ComparisonFailure: expected:&lt;...&gt; but was:&lt;...123&gt;
-	at junit.framework.Assert.assertEquals(Assert.java:81)
-	at junit.framework.Assert.assertEquals(Assert.java:87)
-	at Academy.ValidateTitle.baseNavigation(ValidateTitle.java:52)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>App Testing</h2><h3 id="m2">Academy.HomePage#baseNavigation</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>nonrestricteduser@qw.com</td><td>123456</td><td>nonrestricteduser</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
+<h2>App Testing</h2><h3 id="m0">Academy.HomePage#baseNavigation</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>restricteduser@qw.com</td><td>123456</td><td>restricteduser</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Academy.HomePage#baseNavigation</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>nonrestricteduser@qw.com</td><td>123456</td><td>nonrestricteduser</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Validating Title of the page</h2><h3 id="m2">Academy.ValidateTitle#initialize</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: session not created
+from timeout: Timed out receiving message from renderer: 600.000
   (Session info: chrome=87.0.4280.141)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;XIPL0505&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\CCHOUD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 52ad5f395fb51cc0ca88f96f9b27d503
-*** Element info: {Using=css selector, value=//[href*=&apos;password/new&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+System info: host: &apos;XIPL0505&apos;, ip: &apos;172.27.252.245&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0151C0C3+3326147]
+	Ordinal0 [0x01400851+2164817]
+	Ordinal0 [0x01287298+619160]
+	Ordinal0 [0x0127B17F+569727]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x012838B1+604337]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01281D2C+597292]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127FE62+589410]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127F075+585845]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01276776+550774]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x01279F13+565011]
+	Ordinal0 [0x01279D07+564487]
+	Ordinal0 [0x012882C0+623296]
+	Ordinal0 [0x01226BDD+224221]
+	Ordinal0 [0x01225CAC+220332]
+	Ordinal0 [0x0122189B+202907]
+	Ordinal0 [0x01203DF4+81396]
+	Ordinal0 [0x01204DEE+85486]
+	Ordinal0 [0x01204D79+85369]
+	Ordinal0 [0x014185DC+2262492]
+	GetHandleVerifier [0x016A2874+1487204]
+	GetHandleVerifier [0x016A23CD+1486013]
+	GetHandleVerifier [0x016AA368+1518680]
+	GetHandleVerifier [0x016A2F4E+1488958]
+	Ordinal0 [0x0140ED0D+2223373]
+	Ordinal0 [0x0141A12B+2269483]
+	Ordinal0 [0x0141A26F+2269807]
+	Ordinal0 [0x0142ECB8+2354360]
+	BaseThreadInitThunk [0x77B10419+25]
+	RtlGetAppContainerNamedObjectPath [0x77CD74ED+237]
+	RtlGetAppContainerNamedObjectPath [0x77CD74BD+189]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.LoginPage.forgotPassword(LoginPage.java:28)
-	at Academy.HomePage.baseNavigation(HomePage.java:67)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at resources.BaseClass.initializedriver(BaseClass.java:38)
+	at Academy.ValidateTitle.initialize(ValidateTitle.java:30)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">Academy.HomePage#baseNavigation</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>restricteduser@qw.com</td><td>123456</td><td>restricteduser</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Academy.ValidateTitle#teardown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Academy.ValidateTitle#baseNavigation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: session not created
+from timeout: Timed out receiving message from renderer: 600.000
   (Session info: chrome=87.0.4280.141)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;XIPL0505&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\CCHOUD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 52ad5f395fb51cc0ca88f96f9b27d503
-*** Element info: {Using=css selector, value=//[href*=&apos;password/new&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+System info: host: &apos;XIPL0505&apos;, ip: &apos;172.27.252.245&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0151C0C3+3326147]
+	Ordinal0 [0x01400851+2164817]
+	Ordinal0 [0x01287298+619160]
+	Ordinal0 [0x0127B17F+569727]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x012838B1+604337]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01281D2C+597292]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127FE62+589410]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127F075+585845]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01276776+550774]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x01279F13+565011]
+	Ordinal0 [0x01279D07+564487]
+	Ordinal0 [0x012882C0+623296]
+	Ordinal0 [0x01226BDD+224221]
+	Ordinal0 [0x01225CAC+220332]
+	Ordinal0 [0x0122189B+202907]
+	Ordinal0 [0x01203DF4+81396]
+	Ordinal0 [0x01204DEE+85486]
+	Ordinal0 [0x01204D79+85369]
+	Ordinal0 [0x014185DC+2262492]
+	GetHandleVerifier [0x016A2874+1487204]
+	GetHandleVerifier [0x016A23CD+1486013]
+	GetHandleVerifier [0x016AA368+1518680]
+	GetHandleVerifier [0x016A2F4E+1488958]
+	Ordinal0 [0x0140ED0D+2223373]
+	Ordinal0 [0x0141A12B+2269483]
+	Ordinal0 [0x0141A26F+2269807]
+	Ordinal0 [0x0142ECB8+2354360]
+	BaseThreadInitThunk [0x77B10419+25]
+	RtlGetAppContainerNamedObjectPath [0x77CD74ED+237]
+	RtlGetAppContainerNamedObjectPath [0x77CD74BD+189]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.LoginPage.forgotPassword(LoginPage.java:28)
-	at Academy.HomePage.baseNavigation(HomePage.java:67)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at resources.BaseClass.initializedriver(BaseClass.java:38)
+	at Academy.ValidateTitle.initialize(ValidateTitle.java:30)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Validatting navigation bar</h2><h3 id="m5">Academy.ValidateNavigationBar#initialize</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: session not created
+from timeout: Timed out receiving message from renderer: 600.000
+  (Session info: chrome=87.0.4280.141)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;XIPL0505&apos;, ip: &apos;172.27.252.245&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0151C0C3+3326147]
+	Ordinal0 [0x01400851+2164817]
+	Ordinal0 [0x01287298+619160]
+	Ordinal0 [0x0127B17F+569727]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x012838B1+604337]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01281D2C+597292]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127FE62+589410]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127F075+585845]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01276776+550774]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x01279F13+565011]
+	Ordinal0 [0x01279D07+564487]
+	Ordinal0 [0x012882C0+623296]
+	Ordinal0 [0x01226BDD+224221]
+	Ordinal0 [0x01225CAC+220332]
+	Ordinal0 [0x0122189B+202907]
+	Ordinal0 [0x01203DF4+81396]
+	Ordinal0 [0x01204DEE+85486]
+	Ordinal0 [0x01204D79+85369]
+	Ordinal0 [0x014185DC+2262492]
+	GetHandleVerifier [0x016A2874+1487204]
+	GetHandleVerifier [0x016A23CD+1486013]
+	GetHandleVerifier [0x016AA368+1518680]
+	GetHandleVerifier [0x016A2F4E+1488958]
+	Ordinal0 [0x0140ED0D+2223373]
+	Ordinal0 [0x0141A12B+2269483]
+	Ordinal0 [0x0141A26F+2269807]
+	Ordinal0 [0x0142ECB8+2354360]
+	BaseThreadInitThunk [0x77B10419+25]
+	RtlGetAppContainerNamedObjectPath [0x77CD74ED+237]
+	RtlGetAppContainerNamedObjectPath [0x77CD74BD+189]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at resources.BaseClass.initializedriver(BaseClass.java:38)
+	at Academy.ValidateNavigationBar.initialize(ValidateNavigationBar.java:29)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">Academy.ValidateNavigationBar#teardown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">Academy.ValidateNavigationBar#baseNavigation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: session not created
+from timeout: Timed out receiving message from renderer: 600.000
+  (Session info: chrome=87.0.4280.141)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;XIPL0505&apos;, ip: &apos;172.27.252.245&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0151C0C3+3326147]
+	Ordinal0 [0x01400851+2164817]
+	Ordinal0 [0x01287298+619160]
+	Ordinal0 [0x0127B17F+569727]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x012838B1+604337]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01281D2C+597292]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127FE62+589410]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127F075+585845]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01276776+550774]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x01279F13+565011]
+	Ordinal0 [0x01279D07+564487]
+	Ordinal0 [0x012882C0+623296]
+	Ordinal0 [0x01226BDD+224221]
+	Ordinal0 [0x01225CAC+220332]
+	Ordinal0 [0x0122189B+202907]
+	Ordinal0 [0x01203DF4+81396]
+	Ordinal0 [0x01204DEE+85486]
+	Ordinal0 [0x01204D79+85369]
+	Ordinal0 [0x014185DC+2262492]
+	GetHandleVerifier [0x016A2874+1487204]
+	GetHandleVerifier [0x016A23CD+1486013]
+	GetHandleVerifier [0x016AA368+1518680]
+	GetHandleVerifier [0x016A2F4E+1488958]
+	Ordinal0 [0x0140ED0D+2223373]
+	Ordinal0 [0x0141A12B+2269483]
+	Ordinal0 [0x0141A26F+2269807]
+	Ordinal0 [0x0142ECB8+2354360]
+	BaseThreadInitThunk [0x77B10419+25]
+	RtlGetAppContainerNamedObjectPath [0x77CD74ED+237]
+	RtlGetAppContainerNamedObjectPath [0x77CD74BD+189]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at resources.BaseClass.initializedriver(BaseClass.java:38)
+	at Academy.ValidateNavigationBar.initialize(ValidateNavigationBar.java:29)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

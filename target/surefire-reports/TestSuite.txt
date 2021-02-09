@@ -1,34 +1,136 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 29.658 s <<< FAILURE! - in TestSuite
-Academy.ValidateTitle.baseNavigation  Time elapsed: 6.874 s  <<< FAILURE!
-junit.framework.ComparisonFailure: expected:<...> but was:<...123>
-	at Academy.ValidateTitle.baseNavigation(ValidateTitle.java:52)
-
-Academy.HomePage.baseNavigation[nonrestricteduser@qw.com, 123456, nonrestricteduser](1)  Time elapsed: 7.623 s  <<< FAILURE!
-org.openqa.selenium.InvalidSelectorException: 
-invalid selector: An invalid or illegal selector was specified
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 4, Time elapsed: 604.892 s <<< FAILURE! - in TestSuite
+Academy.ValidateTitle.initialize  Time elapsed: 588.963 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created
+from timeout: Timed out receiving message from renderer: 600.000
   (Session info: chrome=87.0.4280.141)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'XIPL0505', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\CCHOUD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 52ad5f395fb51cc0ca88f96f9b27d503
-*** Element info: {Using=css selector, value=//[href*='password/new']}
-	at Academy.HomePage.baseNavigation(HomePage.java:67)
+System info: host: 'XIPL0505', ip: '172.27.252.245', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0151C0C3+3326147]
+	Ordinal0 [0x01400851+2164817]
+	Ordinal0 [0x01287298+619160]
+	Ordinal0 [0x0127B17F+569727]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x012838B1+604337]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01281D2C+597292]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127FE62+589410]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127F075+585845]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01276776+550774]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x01279F13+565011]
+	Ordinal0 [0x01279D07+564487]
+	Ordinal0 [0x012882C0+623296]
+	Ordinal0 [0x01226BDD+224221]
+	Ordinal0 [0x01225CAC+220332]
+	Ordinal0 [0x0122189B+202907]
+	Ordinal0 [0x01203DF4+81396]
+	Ordinal0 [0x01204DEE+85486]
+	Ordinal0 [0x01204D79+85369]
+	Ordinal0 [0x014185DC+2262492]
+	GetHandleVerifier [0x016A2874+1487204]
+	GetHandleVerifier [0x016A23CD+1486013]
+	GetHandleVerifier [0x016AA368+1518680]
+	GetHandleVerifier [0x016A2F4E+1488958]
+	Ordinal0 [0x0140ED0D+2223373]
+	Ordinal0 [0x0141A12B+2269483]
+	Ordinal0 [0x0141A26F+2269807]
+	Ordinal0 [0x0142ECB8+2354360]
+	BaseThreadInitThunk [0x77B10419+25]
+	RtlGetAppContainerNamedObjectPath [0x77CD74ED+237]
+	RtlGetAppContainerNamedObjectPath [0x77CD74BD+189]
 
-Academy.HomePage.baseNavigation[restricteduser@qw.com, 123456, restricteduser](2)  Time elapsed: 6.635 s  <<< FAILURE!
-org.openqa.selenium.InvalidSelectorException: 
-invalid selector: An invalid or illegal selector was specified
+	at Academy.ValidateTitle.initialize(ValidateTitle.java:30)
+
+Academy.ValidateNavigationBar.initialize  Time elapsed: 590.013 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created
+from timeout: Timed out receiving message from renderer: 600.000
   (Session info: chrome=87.0.4280.141)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'XIPL0505', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\CCHOUD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 52ad5f395fb51cc0ca88f96f9b27d503
-*** Element info: {Using=css selector, value=//[href*='password/new']}
-	at Academy.HomePage.baseNavigation(HomePage.java:67)
+System info: host: 'XIPL0505', ip: '172.27.252.245', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0151C0C3+3326147]
+	Ordinal0 [0x01400851+2164817]
+	Ordinal0 [0x01287298+619160]
+	Ordinal0 [0x0127B17F+569727]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x012838B1+604337]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01281D2C+597292]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127FE62+589410]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x0127F075+585845]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x0127AEA2+568994]
+	Ordinal0 [0x0127A421+566305]
+	Ordinal0 [0x0127A815+567317]
+	Ordinal0 [0x0127A135+565557]
+	Ordinal0 [0x01276776+550774]
+	Ordinal0 [0x0127A0F1+565489]
+	Ordinal0 [0x01279F13+565011]
+	Ordinal0 [0x01279D07+564487]
+	Ordinal0 [0x012882C0+623296]
+	Ordinal0 [0x01226BDD+224221]
+	Ordinal0 [0x01225CAC+220332]
+	Ordinal0 [0x0122189B+202907]
+	Ordinal0 [0x01203DF4+81396]
+	Ordinal0 [0x01204DEE+85486]
+	Ordinal0 [0x01204D79+85369]
+	Ordinal0 [0x014185DC+2262492]
+	GetHandleVerifier [0x016A2874+1487204]
+	GetHandleVerifier [0x016A23CD+1486013]
+	GetHandleVerifier [0x016AA368+1518680]
+	GetHandleVerifier [0x016A2F4E+1488958]
+	Ordinal0 [0x0140ED0D+2223373]
+	Ordinal0 [0x0141A12B+2269483]
+	Ordinal0 [0x0141A26F+2269807]
+	Ordinal0 [0x0142ECB8+2354360]
+	BaseThreadInitThunk [0x77B10419+25]
+	RtlGetAppContainerNamedObjectPath [0x77CD74ED+237]
+	RtlGetAppContainerNamedObjectPath [0x77CD74BD+189]
+
+	at Academy.ValidateNavigationBar.initialize(ValidateNavigationBar.java:29)
 
